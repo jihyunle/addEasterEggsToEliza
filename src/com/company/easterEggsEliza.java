@@ -1,4 +1,4 @@
-package com.company;/*
+/*
 * If you type "pig" Eliza should begin speaking in pig latin
 * Pig Latin Rules:
 
@@ -16,12 +16,12 @@ If you type in "red" Eliza 's text should be displayed in red.
 
 At the end of the chat, print out the chat history.*/
 
-public class addEasterEggsToEliza {
+package com.company;
+public class easterEggsEliza {
 
     public static void main(String[]args){
 
         Eliza myEliza = new Eliza();
-
 
         String userInput = "";
         String str = "";
@@ -31,7 +31,7 @@ public class addEasterEggsToEliza {
         if (userInput.equalsIgnoreCase("pig")){
             System.out.println("Now speaking Pig Latin!");
             // call method pigLatin
-            newStr = pigLatin(str);
+//            newStr = pigLatin(str);
         }
 
         else if (userInput.equalsIgnoreCase("caps")){
@@ -66,33 +66,33 @@ public class addEasterEggsToEliza {
         return newStr;
     }
 
-    public static String pigLatin(String str){
-
-        String newStr = "";
-        char firstletter = str.toLowerCase().charAt(0);
-        char[] vowels = {'a', 'e', 'i', 'o', 'u'};
-
-            // eliza speaks in pig latin
-            for(int i=0; i<vowels.length; i++){
-                // if first letter vowel, append "way" or "tay" randomly chosen
-                if (firstletter == vowels[i]){
-                    int num = (int)Math.random()*2;
-                    if (num==0){
-                        // append "way"
-                        newStr = str + "way";
-                    }else{
-                        // append "tay"
-                        newStr = str + "tay";
-                    }
-                }
-                // else if first letter consonant, append "ay"
-                 else {
-                    newStr = str + "ay";
-
-                }
-
-            }
-            return newStr;
-
-    }
+//    public static String pigLatin(String str){
+//
+//        String newStr = "";
+//        char firstletter = str.toLowerCase().charAt(0);
+//        char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+//
+//            // eliza speaks in pig latin
+//            for(int i=0; i<vowels.length; i++){
+//                // if first letter vowel, append "way" or "tay" randomly chosen
+//                if (firstletter == vowels[i]){
+//                    int num = (int)Math.random()*2;
+//                    if (num==0){
+//                        // append "way"
+//                        newStr = str + "way";
+//                    }else{
+//                        // append "tay"
+//                        newStr = str + "tay";
+//                    }
+//                }
+//                // else if first letter consonant, append "ay"
+//                 else {
+//                    newStr = str + "ay";
+//
+//                }
+//
+//            }
+//            return newStr;
+//
+//    }
 }
