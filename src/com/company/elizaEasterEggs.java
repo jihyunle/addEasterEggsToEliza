@@ -18,11 +18,18 @@ At the end of the chat, print out the chat history.*/
 
 package com.company;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
-public class easterEggsEliza {
+public class elizaEasterEggs {
+
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
+
+    private static ArrayList<String> history = new ArrayList<>();
+
 
     public static void main(String[]args){
 
@@ -56,7 +63,7 @@ public class easterEggsEliza {
                         System.out.println("Good day. What is your problem today?");
                         userInput = input.nextLine();
                         elizaSays = getPigLatin(userInput);
-                        System.out.println(elizaSays);
+                        printElizaSays(elizaSays);
                     }
                 }else{
                     System.out.println("Exiting pig mode");
@@ -72,41 +79,44 @@ public class easterEggsEliza {
                         System.out.println("Good day. What is your problem today?");
                         userInput = input.nextLine();
                         elizaSays = getCaps(userInput);
-                        System.out.println(elizaSays);
+                        printElizaSays(elizaSays);
                     }
                 }else{
                     System.out.println("Exiting caps mode");
                     continue;
                 }
-
             }
 
             else if (userInput.equalsIgnoreCase("play game")){
                 isPlayGame = onOffSwitch(isPlayGame);
                 if (isPlayGame=true){
                     System.out.println("Now playing BlackJack");
+                    playgameInEliza pg = new playgameInEliza();
+                    pg.playGame();
+
                 }else{
                     System.out.println("Exiting playgame mode");
                 }
                 continue;
-                // copy and paste the BlackJack game from earlier
             }
 
             else if (userInput.equalsIgnoreCase("red")){
                 isRed = onOffSwitch(isRed);
                 if (isRed=true){
                     System.out.println("Now showing text in red");
+                    System.out.println("Good day. What is your problem today?");
+                    userInput = input.nextLine();
+                    elizaSays = getRed(userInput);
+                    printElizaSays(elizaSays);
                 }else{
                     System.out.println("Now showing text in black");
+                    continue;
                 }
-                continue;
-
-                // call method redText
             }
 
             else{
                 elizaSays = getElizaSays(userInput);
-                System.out.println(elizaSays);
+                printElizaSays(elizaSays);
             }
 
             // At the end, print chat history
@@ -119,12 +129,8 @@ public class easterEggsEliza {
         System.out.println(">>> END");
         input.close();
         System.exit(0);
+        // End of Main method
     }
-
-//    public static int playBlackJack(){
-//
-//    }
-
 
 
     public static boolean getQuitCommand(String str){
@@ -181,22 +187,33 @@ public class easterEggsEliza {
     }
 
     public static String getCaps(String str){
-        String newStr = str.toUpperCase();
+        String s = "";
+        String newStr = "";
+        s = getElizaSays(str);
+        newStr = s.toUpperCase();
         return newStr;
     }
 
-    public static String getElizaSays(String userInput){
-        String elizaSays = "";
+    public static String getRed(String str){
+        String s = "";
+        String newStr = "";
+        s = getElizaSays(str);
+        newStr = ANSI_RED + s + ANSI_RESET;
+        return newStr;
+    }
+
+    public static String getElizaSays(String str){
+        String newStr = "";
         // After user input is read, generate a random number between 0 and 1
         Random rnd = new Random();
         int responseOption = rnd.nextInt(2);
         if(responseOption==1){
             // call method that randomly chooses hedge
-            return elizaSays = replyWithHedge();
+            return newStr = replyWithHedge();
         }else{
             // call method that first replaces words in user input
             // then prepends the qualifier
-            return elizaSays = replyWithQualifier(userInput);
+            return newStr = replyWithQualifier(str);
         }
     }
 
@@ -241,6 +258,25 @@ public class easterEggsEliza {
             newStr += word + " ";
         }
         return newStr;
+    }
+
+    // Print elizaSays
+    // And call addToHistory each time Eliza returns a statement
+    public static void printElizaSays(String str){
+        System.out.println(str);
+        buildHistory(str);
+    }
+
+    // Call addToHistory each time user types input and each time eliza returns a statement
+    public static void buildHistory(String str){
+        history.add(str);
+    }
+
+    // Call printHistory at the end of main method
+    public static void printHistory(){
+        for (int i=0; i<history.size(); i++){
+            System.out.println(history.get(i));
+        }
     }
 
 
