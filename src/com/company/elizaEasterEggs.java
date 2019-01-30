@@ -166,13 +166,13 @@ public class elizaEasterEggs {
     }
 
     public static boolean onOffSwitch (boolean isOn){
-        // Acts as an on/off switch
-        if (isOn){
-            isOn = false;
-        }else {
-            isOn = true;
-        }
-        return isOn;
+//        // Acts as an on/off switch
+//        if (isOn){
+//            isOn = false;
+//        }else {
+//            isOn = true;
+//        }
+        return !isOn;
     }
 
     public static String getPigLatin(String str) {
