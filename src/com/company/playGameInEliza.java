@@ -25,7 +25,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class playgameInEliza {
+public class playGameInEliza {
 
     // Private variables
     private ArrayList<Integer> cardsDrawn = new ArrayList<>();
@@ -33,7 +33,7 @@ public class playgameInEliza {
     private int cardNumber;
 
     // Constructor no-arg
-    public playgameInEliza(){
+    public playGameInEliza(){
     }
 
     // Getters and Setters
