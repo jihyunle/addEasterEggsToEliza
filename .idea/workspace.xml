@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="976a3cc4-dd54-4382-a5b3-816dff4290ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/elizaEasterEggs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/elizaEasterEggs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/playGameInEliza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/playGameInEliza.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/elizaEasterEggs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="134" column="12" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
+            <state relative-caret-position="274">
+              <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4925#4926#0" expanded="true" />
@@ -33,10 +33,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="408">
+              <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1331#1332#0" expanded="true" />
+                <element signature="e#1377#1378#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +64,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Eliza.java" />
         <option value="$PROJECT_DIR$/src/com/company/playgameInEliza.java" />
         <option value="$PROJECT_DIR$/src/com/company/easterEggsEliza.java" />
-        <option value="$PROJECT_DIR$/src/com/company/playGameInEliza.java" />
         <option value="$PROJECT_DIR$/src/com/company/elizaEasterEggs.java" />
+        <option value="$PROJECT_DIR$/src/com/company/playGameInEliza.java" />
       </list>
     </option>
   </component>
@@ -167,12 +169,12 @@
       <workItem from="1548862491314" duration="9202000" />
       <workItem from="1548875089247" duration="136000" />
       <workItem from="1548875624876" duration="9863000" />
-      <workItem from="1548945692247" duration="18882000" />
+      <workItem from="1548945692247" duration="24239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61029000" />
+    <option name="totallyTimeSpent" value="66386000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -256,20 +258,29 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Eliza.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="1539" selection-start-line="1539" selection-end-line="1539" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="408">
+          <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/elizaEasterEggs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="134" column="12" selection-start-line="134" selection-start-column="12" selection-end-line="134" selection-end-column="12" />
+        <state relative-caret-position="274">
+          <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4925#4926#0" expanded="true" />

@@ -21,19 +21,27 @@ What variables are required?
 Show a check of your solution with test data for at least two valid test cases
 */
 package com.company;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class playGameInEliza {
 
     // Private variables
-    private ArrayList<Integer> cardsDrawn = new ArrayList<>();
-    private int sum;
-    private int cardNumber;
+    private ArrayList<Integer> cardsDrawn;
+    private int sum = 0;
+    private int cardNumber = 0;
+//    private boolean replay;
+    private Scanner keyboard;
 
     // Constructor no-arg
     public playGameInEliza(){
+        cardsDrawn = new ArrayList<>();
+    }
+
+    // Constructor one-arg
+    public playGameInEliza(Scanner input){
+        cardsDrawn = new ArrayList<>();
+        keyboard = input;
     }
 
     // Getters and Setters
@@ -61,15 +69,27 @@ public class playGameInEliza {
         this.cardNumber = cardNumber;
     }
 
+//    public boolean isReplay() {
+//        return replay;
+//    }
+
+//    public void setReplay(boolean replay) {
+//        this.replay = replay;
+//    }
+
     public void playGame(){
         // Welcome message
         showWelcomeMessage();
 
-        // Prompt user for card number
-        promptUser();
-        if(sum!=0){
-            showSumOfCards(sum);
-        }
+        do {
+            // Prompt user for card number
+            promptUser();
+            if(sum!=0){
+                showSumOfCards(sum);
+            }
+//            replay();
+        } while (replay());
+
 
         // Exit message
         showExitMessage();
@@ -83,10 +103,30 @@ public class playGameInEliza {
         System.out.println("Goodbye! You are now exiting the game.");
     }
 
-    public void promptUser(){
+    public boolean replay(){
+        // Ask if user wants to play again
+        System.out.println("Would you like to play again? (y/n)");
         Scanner input = new Scanner(System.in);
+        String str = input.nextLine();
+
+        if (str.equalsIgnoreCase("y")){
+            // Reset sum to zero
+            for (int i=0; i<2; i++){
+                cardsDrawn.remove(i);
+            }
+            return true;
+        }else {
+            return false;
+        }
+//        keyboard.close();
+    }
+
+    public void promptUser(){
+
         for(int i=0; i<2; i++){
+
             System.out.println("Pick a card: ");
+            Scanner input = new Scanner(System.in);
             String card = input.nextLine();
 
             // If user inputs J, Q or K, convert it to 10

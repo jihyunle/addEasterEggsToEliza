@@ -18,6 +18,7 @@ At the end of the chat, print out the chat history.*/
 
 package com.company;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
@@ -27,12 +28,22 @@ public class elizaEasterEggs {
 
     private static final String ANSI_RESET = "\u001B[0m";
     private static final String ANSI_RED = "\u001B[31m";
+//    private static Scanner input;
+    private static Scanner input = new Scanner(System.in);
+//    private static ArrayList<String> history;
     private static ArrayList<String> history = new ArrayList<>();
+//    private static Random rnd;
+    private static Random rnd = new Random();
+
+    public elizaEasterEggs(){
+//        input = new Scanner(System.in);
+//        history = new ArrayList<>();
+//        rnd = new Random();
+    }
 
     public static void main(String[]args) {
 
         String userInput = "";
-        String str = "";
         String elizaSays = "";
 
         boolean isPig = false;
@@ -40,7 +51,6 @@ public class elizaEasterEggs {
         boolean isPlayGame = false;
         boolean isRed = false;
 
-        Scanner input = new Scanner(System.in);
         print("Good day. What is your problem today?");
 
         while(true) {
@@ -52,49 +62,58 @@ public class elizaEasterEggs {
             // If user types in "pig"
             if (userInput.equalsIgnoreCase("pig")) {
                 isPig = onOffSwitch(isPig);
-//                if (isPig){
-//                    String intro = "pig ON";
-//                    print(intro);
-//                }else{
-//                    String outro = "pig OFF";
-//                    print(outro);
-//                }
+                if (isPig){
+                    String intro = "pig ON";
+                    print(intro);
+                }else{
+                    String outro = "pig OFF";
+                    print(outro);
+                }
+                // Then return to top of the loop
+                continue;
             }
 
             // If user types in "caps"
             if (userInput.equalsIgnoreCase("caps")) {
                 isCaps = onOffSwitch(isCaps);
-//                if (isCaps){
-//                    String intro = "caps ON";
-//                    print(intro);
-//                }else{
-//                    String outro = "caps OFF";
-//                    print(outro);
-//                }
+                if (isCaps){
+                    String intro = "caps ON";
+                    print(intro);
+                }else{
+                    String outro = "caps OFF";
+                    print(outro);
+                }
+                // Then return to top of the loop
+                continue;
             }
 
             // If uer types in "red"
             if (userInput.equalsIgnoreCase("red")) {
+                // Call on/off method
                 isRed = onOffSwitch(isRed);
-//                if (isRed){
-//                    String intro = "red ON";
-//                    print(intro);
-//                }else {
-//                    String outro = "red OFF";
-//                    print(outro);
-//                }
+
+                if (isRed){
+                    String intro = "red ON";
+                    print(intro);
+                }else {
+                    String outro = "red OFF";
+                    print(outro);
+                }
+                // Then return to top of the loop
+                continue;
             }
 
             // If user types in "play game"
             if (userInput.equalsIgnoreCase("play game")) {
                 isPlayGame = onOffSwitch(isPlayGame);
                 if (isPlayGame){
-                    String intro = "game ON";
+                    String intro = "Loading game...";
                     print(intro);
-                }else {
-                    String outro = "game OFF";
-                    print(outro);
                 }
+//                else {
+//                    String outro = "game OFF";
+//                    print(outro);
+//                }
             }
 
 
@@ -125,7 +144,7 @@ public class elizaEasterEggs {
 
                 // If isPlayGame is true
                 if (isPlayGame) {
-                    playGameInEliza pg = new playGameInEliza();
+                    playGameInEliza pg = new playGameInEliza(input);
                     pg.playGame();
                 }
 
@@ -191,7 +210,6 @@ public class elizaEasterEggs {
             // If first letter is a consonant, append "ay"
             if (isVowel){
                 // Generate a pigIndex that will be either 0 or 1
-                Random rnd = new Random();
                 int index = rnd.nextInt(2);
                 pigString = pigLatin[index];
             }else{
@@ -222,7 +240,6 @@ public class elizaEasterEggs {
     public static String getElizaSays(String str){
         String newStr = "";
         // After user input is read, generate a random number between 0 and 1
-        Random rnd = new Random();
         int num = rnd.nextInt(2);
         switch (num){
             case 0:
@@ -241,7 +258,6 @@ public class elizaEasterEggs {
         String[] hedges = {"Please tell me more",
                 "Many of my patients tell me the same thing",
                 "It is getting late, maybe we had better quit"};
-        Random rnd = new Random();
         int index = rnd.nextInt(hedges.length);
         return hedges[index];
     }
@@ -251,7 +267,6 @@ public class elizaEasterEggs {
         String[] qualifiers = {"Why do you say that ",
                 "You seem to think that ",
                 "So, you are concerned that "};
-        Random rnd = new Random();
         int index = rnd.nextInt(qualifiers.length);
         String newStr = qualifiers[index] + replacedStr;
         return newStr;
