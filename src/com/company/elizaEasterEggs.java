@@ -24,119 +24,120 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class elizaEasterEggs {
-
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
-
     private static ArrayList<String> history = new ArrayList<>();
 
-
-    public static void main(String[]args){
-
+    public static void main(String[]args) {
         String userInput = "";
         String str = "";
         String newStr = "";
         String elizaSays = "";
         int num = -1;
-        boolean userQuits = true;
-        boolean isPig = false; boolean isCaps = false; boolean isPlayGame = false; boolean isRed = false;
+        boolean userQuits = false;
+        boolean isPig = false;
+        boolean isCaps = false;
+        boolean isPlayGame = false;
+        boolean isRed = false;
 
         Scanner input = new Scanner(System.in);
         System.out.println("Good day. What is your problem today?");
-        do {
-//        System.out.println("Good day. What is your problem today?");
-        userInput = input.nextLine();
-        addtoHistory(userInput);
-        userQuits = getQuitCommand(userInput);
+
+        while (userQuits){
+            System.out.println("Enter your response here: ");
+            userInput = input.nextLine();
+            addtoHistory(userInput);
 
             // If user types a quit command, set variable userQuits to true
-//            if (userQuits = getQuitCommand(userInput)){
-            if (userQuits){
+            if (userQuits = getQuitCommand(userInput)) {
                 break;
             }
-//                break;
-//            }
 
-            else if (userInput.equalsIgnoreCase("pig")){
-//                isPig = onOffSwitch(isPig);
-                // If isPig is false
-                if (isPig==false){
-                    isPig = true;
-                    String intro = "Now speaking in pig latin";
-                    printAndAddToHistory(intro);
-//                    while (isPig==true){
-                        System.out.println("Good day. What is your problem today?");
-                        userInput = input.nextLine();
-                        addtoHistory(userInput);
-                        elizaSays = getPigLatin(userInput);
-                        printAndAddToHistory(elizaSays);
-//                    }
-                }else{
-                    isPig = false;
-                    String outro = "Exiting pig mode";
-                    printAndAddToHistory(outro);
-                    continue;
-                }
+            // If user types in "pig"
+            if (userInput.equalsIgnoreCase("pig")) {
+                isPig = onOffSwitch(isPig);
             }
 
-            else if (userInput.equalsIgnoreCase("caps")){
-                isCaps = onOffSwitch(isCaps);
-                if (!isCaps){
-                    String intro = "Now showing text in all caps";
-                    printAndAddToHistory(intro);
-                    while (!isCaps){
-                        System.out.println("Good day. What is your problem today?");
-                        userInput = input.nextLine();
-                        addtoHistory(userInput);
-                        elizaSays = getCaps(userInput);
-                        printAndAddToHistory(elizaSays);
-                    }
-                }else{
-                    String outro ="Exiting caps mode";
-                    printAndAddToHistory(outro);
-                    continue;
-                }
-            }
-
-            else if (userInput.equalsIgnoreCase("play game")){
-                isPlayGame = onOffSwitch(isPlayGame);
-                if (!isPlayGame){
-                    String intro = "Now playing BlackJack game";
-                    printAndAddToHistory(intro);
-                    playGameInEliza pg = new playGameInEliza();
-                    pg.playGame();
-                }else{
-                    String outro = "Exiting playgame mode";
-                    printAndAddToHistory(outro);
-                }
+            // If isPig is true
+            if (!isPig){
+                String intro = "Now speaking in pig latin";
+                printAndAddToHistory(intro);
+                do {
+                    System.out.println("Enter your response here: ");
+                    userInput = input.nextLine();
+                    addtoHistory(userInput);
+                    elizaSays = getPigLatin(userInput);
+                    printAndAddToHistory(elizaSays);
+                }while (!isPig);
+            }else{
+                String outro = "Exiting pig mode";
+                printAndAddToHistory(outro);
                 continue;
             }
 
-            else if (userInput.equalsIgnoreCase("red")){
+            // If user types in "caps"
+            if (userInput.equalsIgnoreCase("caps")) {
+                isCaps = onOffSwitch(isCaps);
+            }
+
+            // If isCaps is true
+            if (!isCaps) {
+                String intro = "Now showing text in all caps";
+                printAndAddToHistory(intro);
+                do {
+                    System.out.println("Enter your response here: ");
+                    userInput = input.nextLine();
+                    addtoHistory(userInput);
+                    elizaSays = getCaps(userInput);
+                    printAndAddToHistory(elizaSays);
+                }while (!isCaps);
+            } else {
+                String outro = "Exiting caps mode";
+                printAndAddToHistory(outro);
+                continue;
+            }
+
+            // If uer types in "red"
+            if (userInput.equalsIgnoreCase("red")) {
                 isRed = onOffSwitch(isRed);
-                if (!isRed){
-                    String intro = "Now showing text in red";
-                    printAndAddToHistory(intro);
-                    while (!isRed){
-                        System.out.println("Good day. What is your problem today?");
-                        userInput = input.nextLine();
-                        addtoHistory(userInput);
-                        elizaSays = getRed(userInput);
-                        printAndAddToHistory(elizaSays);
-                    }
-                }else{
-                    String outro = "Now showing text in black";
-                    printAndAddToHistory(outro);
-                    continue;
-                }
             }
 
-            else{
-                elizaSays = getElizaSays(userInput);
-                printAndAddToHistory(elizaSays);
+            // If isRed is true
+            if (!isRed) {
+                String intro = "Now showing text in red";
+                printAndAddToHistory(intro);
+                do {
+                    System.out.println("Enter your response here: ");
+                    userInput = input.nextLine();
+                    addtoHistory(userInput);
+                    elizaSays = getRed(userInput);
+                    printAndAddToHistory(elizaSays);
+                }while (!isRed);
+            } else {
+                String outro = "Now showing text in black";
+                printAndAddToHistory(outro);
+                continue;
             }
 
-        }while (!userQuits);
+            // If user types in "play game"
+            if (userInput.equalsIgnoreCase("play game")) {
+                isPlayGame = onOffSwitch(isPlayGame);
+            }
+
+            // If isPlayGame is true
+            if (!isPlayGame) {
+                String intro = "Now playing BlackJack game";
+                printAndAddToHistory(intro);
+                playGameInEliza pg = new playGameInEliza();
+                pg.playGame();
+            } else {
+                String outro = "Exiting playgame mode";
+                printAndAddToHistory(outro);
+                continue;
+            }
+
+
+        } // End of while loop
 
         String outro = ">>> END";
         printAndAddToHistory(outro);
@@ -165,18 +166,11 @@ public class elizaEasterEggs {
         return userQuits;
     }
 
-    public static boolean onOffSwitch (boolean isOn){
-//        // Acts as an on/off switch
-//        if (isOn){
-//            isOn = false;
-//        }else {
-//            isOn = true;
-//        }
-        return !isOn;
+    public static boolean onOffSwitch (boolean onOff){
+        return !onOff;
     }
 
     public static String getPigLatin(String str) {
-
         String[] words = str.split(" ");
         String newStr = "";
         char[] vowels = {'a', 'e', 'i', 'o', 'u'};

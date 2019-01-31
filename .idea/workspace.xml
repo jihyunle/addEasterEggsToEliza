@@ -14,25 +14,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/elizaEasterEggs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+            <state relative-caret-position="231">
+              <caret line="90" column="13" lean-forward="true" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#9803#9804#0" expanded="true" />
-                <element signature="e#9835#9836#0" expanded="true" />
+                <element signature="e#10766#10767#0" expanded="true" />
+                <element signature="e#10798#10799#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+            <state relative-caret-position="534">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,6 +60,7 @@
         <option value="$PROJECT_DIR$/src/com/company/Eliza.java" />
         <option value="$PROJECT_DIR$/src/com/company/playgameInEliza.java" />
         <option value="$PROJECT_DIR$/src/com/company/easterEggsEliza.java" />
+        <option value="$PROJECT_DIR$/src/com/company/playGameInEliza.java" />
         <option value="$PROJECT_DIR$/src/com/company/elizaEasterEggs.java" />
       </list>
     </option>
@@ -77,6 +78,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,7 +101,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,12 +164,13 @@
       <workItem from="1548772140125" duration="9068000" />
       <workItem from="1548862491314" duration="9202000" />
       <workItem from="1548875089247" duration="136000" />
-      <workItem from="1548875624876" duration="9701000" />
+      <workItem from="1548875624876" duration="9863000" />
+      <workItem from="1548945692247" duration="2256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41985000" />
+    <option name="totallyTimeSpent" value="44403000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -183,7 +185,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18176973" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18336888" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -252,24 +254,24 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Eliza.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/elizaEasterEggs.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+        <state relative-caret-position="534">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9803#9804#0" expanded="true" />
-            <element signature="e#9835#9836#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/elizaEasterEggs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+        <state relative-caret-position="231">
+          <caret line="90" column="13" lean-forward="true" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#10766#10767#0" expanded="true" />
+            <element signature="e#10798#10799#0" expanded="true" />
           </folding>
         </state>
       </provider>
