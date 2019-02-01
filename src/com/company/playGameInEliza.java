@@ -127,10 +127,10 @@ public class playGameInEliza {
             * Validate input.
             * If it's a zero, keep count and exit after the second time
             * */
-            forceExit = validateInput(cardNumber);
-            if (forceExit){
-                break;
-            }
+//            forceExit = validateInput(cardNumber);
+//            if (forceExit){
+//                break;
+//            }
 
             /*
             * Add the two cards to array list.
@@ -174,6 +174,7 @@ public class playGameInEliza {
     }
 
 
+    // Not using this for now
     public boolean validateInput(int num){
         // Increment zeroCount each time method is called
         while (zeroCount<2){

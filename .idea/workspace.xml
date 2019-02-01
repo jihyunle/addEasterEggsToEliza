@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="976a3cc4-dd54-4382-a5b3-816dff4290ca" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/playGameInEliza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/playGameInEliza.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="179" column="25" selection-start-line="179" selection-start-column="25" selection-end-line="179" selection-end-column="25" />
+            <state relative-caret-position="425">
+              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2073#2074#0" expanded="true" />
@@ -174,12 +175,12 @@
       <workItem from="1548875624876" duration="9863000" />
       <workItem from="1548945692247" duration="24299000" />
       <workItem from="1549032091866" duration="1285000" />
-      <workItem from="1549047224762" duration="8220000" />
+      <workItem from="1549047224762" duration="9315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75951000" />
+    <option name="totallyTimeSpent" value="77046000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -282,8 +283,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="179" column="25" selection-start-line="179" selection-start-column="25" selection-end-line="179" selection-end-column="25" />
+        <state relative-caret-position="425">
+          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2073#2074#0" expanded="true" />
