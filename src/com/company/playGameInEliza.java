@@ -95,9 +95,9 @@ public class playGameInEliza {
         do {
             // Prompt user for card number
             promptUser();
-            if (forceExit){
-                break;
-            }
+//            if (forceExit){
+//                break;
+//            }
 
             showSumOfCards();
 
@@ -128,6 +128,9 @@ public class playGameInEliza {
             * If it's a zero, keep count and exit after the second time
             * */
             forceExit = validateInput(cardNumber);
+            if (forceExit){
+                break;
+            }
 
             /*
             * Add the two cards to array list.
@@ -173,10 +176,11 @@ public class playGameInEliza {
 
     public boolean validateInput(int num){
         // Increment zeroCount each time method is called
-        while (zeroCount<3){
+        while (zeroCount<2){
             if(num==0){
                 zeroCount++;
             }
+            return false;
         }
         // When zeroCount reaches 2 exit the program
         return true;
