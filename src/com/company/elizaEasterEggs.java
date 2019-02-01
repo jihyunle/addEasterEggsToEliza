@@ -48,7 +48,6 @@ public class elizaEasterEggs {
 
         boolean isPig = false;
         boolean isCaps = false;
-        boolean isPlayGame = false;
         boolean isRed = false;
 
         print("Good day. What is your problem today?");
@@ -105,15 +104,14 @@ public class elizaEasterEggs {
 
             // If user types in "play game"
             if (userInput.equalsIgnoreCase("play game")) {
-                isPlayGame = onOffSwitch(isPlayGame);
-                if (isPlayGame){
+
                     String intro = "Loading game...";
                     print(intro);
-                }
-//                else {
-//                    String outro = "game OFF";
-//                    print(outro);
-//                }
+                    System.out.println();
+                    playGameInEliza pg = new playGameInEliza(input);
+                    pg.playGame();
+                    print("Finished playing a game");
+                    continue;
             }
 
 
@@ -142,18 +140,11 @@ public class elizaEasterEggs {
 
                 }
 
-                // If isPlayGame is true
-                if (isPlayGame) {
-                    playGameInEliza pg = new playGameInEliza(input);
-                    pg.playGame();
-                }
-
                 print(elizaSays);
 
             }
 
-        }
-        // End of while loop
+        } // End of while loop
 
         String outro = ">>> END";
         print(outro);
@@ -163,8 +154,7 @@ public class elizaEasterEggs {
         showHistory();
 
         System.exit(0);
-    }
-    // End of Main method
+    } // End of Main method
 
 
 
@@ -180,6 +170,7 @@ public class elizaEasterEggs {
     public static boolean onOffSwitch (boolean onOff){
         return !onOff;
     }
+
 
     public static String getPigLatin(String str) {
         String[] words = str.split(" ");
@@ -206,8 +197,10 @@ public class elizaEasterEggs {
                 }
             }
 
-            // If first letter is a vowel, append "way" or "tay", randomly chosen
-            // If first letter is a consonant, append "ay"
+            /*
+            * If first letter is a vowel, append "way" or "tay", randomly chosen
+            * If first letter is a consonant, append "ay"
+            * */
             if (isVowel){
                 // Generate a pigIndex that will be either 0 or 1
                 int index = rnd.nextInt(2);

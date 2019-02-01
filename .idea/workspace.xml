@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="976a3cc4-dd54-4382-a5b3-816dff4290ca" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/elizaEasterEggs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/elizaEasterEggs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/playGameInEliza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/playGameInEliza.java" afterDir="false" />
     </list>
@@ -14,31 +15,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/elizaEasterEggs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
+            <state relative-caret-position="381">
+              <caret line="112" column="53" selection-start-line="112" selection-start-column="53" selection-end-line="112" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4925#4926#0" expanded="true" />
-                <element signature="e#4954#4955#0" expanded="true" />
-                <element signature="e#9197#9198#0" expanded="true" />
-                <element signature="e#9229#9230#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+            <state relative-caret-position="1564">
+              <caret line="181" column="39" lean-forward="true" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1331#1332#0" expanded="true" />
-                <element signature="e#1377#1378#0" expanded="true" />
+                <element signature="e#2073#2074#0" expanded="true" />
+                <element signature="e#2105#2106#0" expanded="true" />
+                <element signature="e#2152#2153#0" expanded="true" />
+                <element signature="e#2194#2195#0" expanded="true" />
+                <element signature="e#2227#2228#0" expanded="true" />
+                <element signature="e#2256#2257#0" expanded="true" />
+                <element signature="e#2301#2302#0" expanded="true" />
+                <element signature="e#2337#2338#0" expanded="true" />
+                <element signature="e#2616#2617#0" expanded="true" />
+                <element signature="e#2681#2682#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,8 +86,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,6 +108,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -169,12 +174,14 @@
       <workItem from="1548862491314" duration="9202000" />
       <workItem from="1548875089247" duration="136000" />
       <workItem from="1548875624876" duration="9863000" />
-      <workItem from="1548945692247" duration="24239000" />
+      <workItem from="1548945692247" duration="24299000" />
+      <workItem from="1549032091866" duration="1285000" />
+      <workItem from="1549047224762" duration="7334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66386000" />
+    <option name="totallyTimeSpent" value="75065000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -189,7 +196,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18336888" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07356077" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -203,7 +210,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3445287" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
@@ -265,28 +272,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/elizaEasterEggs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+        <state relative-caret-position="381">
+          <caret line="112" column="53" selection-start-line="112" selection-start-column="53" selection-end-line="112" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1331#1332#0" expanded="true" />
-            <element signature="e#1377#1378#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/elizaEasterEggs.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="109" column="51" selection-start-line="109" selection-start-column="51" selection-end-line="109" selection-end-column="51" />
+        <state relative-caret-position="1564">
+          <caret line="181" column="39" lean-forward="true" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4925#4926#0" expanded="true" />
-            <element signature="e#4954#4955#0" expanded="true" />
-            <element signature="e#9197#9198#0" expanded="true" />
-            <element signature="e#9229#9230#0" expanded="true" />
+            <element signature="e#2073#2074#0" expanded="true" />
+            <element signature="e#2105#2106#0" expanded="true" />
+            <element signature="e#2152#2153#0" expanded="true" />
+            <element signature="e#2194#2195#0" expanded="true" />
+            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="e#2256#2257#0" expanded="true" />
+            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2337#2338#0" expanded="true" />
+            <element signature="e#2616#2617#0" expanded="true" />
+            <element signature="e#2681#2682#0" expanded="true" />
           </folding>
         </state>
       </provider>

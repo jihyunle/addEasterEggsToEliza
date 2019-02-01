@@ -1,4 +1,5 @@
-/*Design an application that will prompt the user for the numerical value of two cards.
+/*
+Design an application that will prompt the user for the numerical value of two cards.
 The program will receive the two numbers and display their sum on the screen.
 If the calculated sum is 21, an asterisk is to be displayed beside the sum.
 
@@ -28,9 +29,11 @@ public class playGameInEliza {
 
     // Private variables
     private ArrayList<Integer> cardsDrawn;
-    private int sum = 0;
-    private int cardNumber = 0;
-//    private boolean replay;
+    private int sum;
+    private int cardNumber;
+    private int zeroCount = 0;
+    private boolean forceExit = false;
+
     private Scanner keyboard;
 
     // Constructor no-arg
@@ -69,13 +72,21 @@ public class playGameInEliza {
         this.cardNumber = cardNumber;
     }
 
-//    public boolean isReplay() {
-//        return replay;
-//    }
+    public int getZeroCount() {
+        return zeroCount;
+    }
 
-//    public void setReplay(boolean replay) {
-//        this.replay = replay;
-//    }
+    public void setZeroCount(int zeroCount) {
+        this.zeroCount = zeroCount;
+    }
+
+    public boolean isForceExit() {
+        return forceExit;
+    }
+
+    public void setForceExit(boolean forceExit) {
+        this.forceExit = forceExit;
+    }
 
     public void playGame(){
         // Welcome message
@@ -84,12 +95,13 @@ public class playGameInEliza {
         do {
             // Prompt user for card number
             promptUser();
-            if(sum!=0){
-                showSumOfCards(sum);
+            if (forceExit){
+                break;
             }
-//            replay();
-        } while (replay());
 
+            showSumOfCards();
+
+        } while (replay());
 
         // Exit message
         showExitMessage();
@@ -99,27 +111,6 @@ public class playGameInEliza {
         System.out.println("Welcome! Let's play a game.");
     }
 
-    public static void showExitMessage(){
-        System.out.println("Goodbye! You are now exiting the game.");
-    }
-
-    public boolean replay(){
-        // Ask if user wants to play again
-        System.out.println("Would you like to play again? (y/n)");
-        Scanner input = new Scanner(System.in);
-        String str = input.nextLine();
-
-        if (str.equalsIgnoreCase("y")){
-            // Reset sum to zero
-            for (int i=0; i<2; i++){
-                cardsDrawn.remove(i);
-            }
-            return true;
-        }else {
-            return false;
-        }
-//        keyboard.close();
-    }
 
     public void promptUser(){
 
@@ -127,78 +118,107 @@ public class playGameInEliza {
 
             System.out.println("Pick a card: ");
             Scanner input = new Scanner(System.in);
-            String card = input.nextLine();
+            String cardString = input.nextLine();
 
-            // If user inputs J, Q or K, convert it to 10
-            // Convert A to 11
-            cardNumber = getFaceCardNumber(card);
+            // Pass string and get integer
+            cardNumber = getCardNumber(cardString);
 
-            // Allow the user to designate A as either 1 or 11
-            if(cardNumber==11){
-                System.out.println("Would you like to designate it as a 1 or 11?");
-                int aceCard = input.nextInt();
-                cardNumber = getAceCardNumber(aceCard);
-                input.nextLine();
-            }
+            /*
+            * Validate input.
+            * If it's a zero, keep count and exit after the second time
+            * */
+            forceExit = validateInput(cardNumber);
 
-            // Check the inputted number to see if it's a zero
-            // If so, keep count
-            trackZeroCount(cardNumber);
-
-            // Remember the card number in a list
+            /*
+            * Add the two cards to array list.
+            * Then calculate sum
+            * */
             cardsDrawn.add(cardNumber);
             sum += cardsDrawn.get(i);
         }
+
     }
 
-    public static void showSumOfCards(int sum){
+
+    public static int getCardNumber(String cardString){
+        int num = 0;
+        Scanner input = new Scanner(System.in);
+
+        // If card is J, Q or K
+        if(cardString.equalsIgnoreCase("J")||
+                cardString.equalsIgnoreCase("Q")||
+                cardString.equalsIgnoreCase("K")){
+            System.out.println("You picked a face card " + cardString.toUpperCase());
+            num = 10;
+
+        // If card is A
+        }else if (cardString.equalsIgnoreCase("A")){
+            System.out.println("You picked a face card " + cardString.toUpperCase());
+            // Allow the user to designate A as either 1 or 11
+            System.out.println("Would you like to designate it as a 1 or 11?");
+            if (input.nextInt()==1){
+                num = 1;
+            } else if (input.nextInt()==11){
+                num = 11;
+            }
+            input.nextLine();
+
+        // Otherwise, if it's a regular number
+        }else{
+            num = Integer.parseInt(cardString);
+        }
+        return num;
+    }
+
+
+    public boolean validateInput(int num){
+        // Increment zeroCount each time method is called
+        while (zeroCount<3){
+            if(num==0){
+                zeroCount++;
+            }
+        }
+        // When zeroCount reaches 2 exit the program
+        return true;
+    }
+
+    public void showSumOfCards(){
         System.out.print("Sum of two cards: ");
-        if(sum==21){
+        if(sum == 21){
             System.out.println(sum + "*");
         }else{
             System.out.println(sum);
         }
     }
 
-    public static void trackZeroCount(int cardNum){
-        // Validate whether zero is entered
-        int zeroCount = 0;
-        // Increment zeroCount each time method is called
-        if(cardNum==0){
-            zeroCount++;
+    /*
+     * Ask if user wants to play again
+     * */
+    public boolean replay(){
+        System.out.println("Would you like to play again? (y/n)");
+        Scanner input = new Scanner(System.in);
+        String str = input.nextLine();
+
+        if (str.equalsIgnoreCase("y")){
+            // Reset sum to zero
+            resetSum();
+            return true;
+        }else {
+            return false;
         }
-        // When zeroCount reaches 2 exit the program
-        if(zeroCount==2){
-            System.exit(0);
-        }
+//        keyboard.close();
     }
 
-    public static int getFaceCardNumber(String card){
-        int num = -1;
-
-        if(card.equalsIgnoreCase("J")||
-                card.equalsIgnoreCase("Q")||
-                card.equalsIgnoreCase("K")){
-            System.out.println("You picked a face card " + card.toUpperCase());
-            num = 10;
-        }else if (card.equalsIgnoreCase("A")){
-            System.out.println("You picked a face card " + card.toUpperCase());
-            num = 11;
-        }else{
-            num = Integer.parseInt(card);
-        }
-        return num;
+    public void resetSum(){
+        cardsDrawn.clear();
+        sum = 0;
     }
 
-    public static int getAceCardNumber(int a){
-        int n = -1;
-        if(a==1){
-            n = 1;
-        }else if (a==11){
-            n = 11;
-        }
-        return n;
+    public static void showExitMessage(){
+        System.out.println("Goodbye! You are now exiting the game.");
+        System.out.println();
     }
+
 }
 
 
