@@ -237,32 +237,48 @@ public class elizaEasterEggs {
         switch (num){
             case 0:
                 // call hedge
-                newStr = replyHedge();
+                newStr = modifiedReplyHedge(rnd);
                 break;
             case 1:
                 // call qualifier
-                newStr = replyQualifier(str);
+                newStr = modifiedReplyQualifier(rnd);
                 break;
         }
         return newStr;
     }
 
-    public static String replyHedge(){
-        String[] hedges = {"Please tell me more",
-                "Many of my patients tell me the same thing",
-                "It is getting late, maybe we had better quit"};
-        int index = rnd.nextInt(hedges.length);
-        return hedges[index];
+//    public static String replyHedge(){
+//        String[] hedges = {"Please tell me more",
+//                "Many of my patients tell me the same thing",
+//                "It is getting late, maybe we had better quit"};
+//        int index = rnd.nextInt(hedges.length);
+//        return hedges[index];
+//    }
+//
+//    public static String replyQualifier(String str){
+//        String replacedStr = replaceWords(str);
+//        String[] qualifiers = {"Why do you say that ",
+//                "You seem to think that ",
+//                "So, you are concerned that "};
+//        int index = rnd.nextInt(qualifiers.length);
+//        String newStr = qualifiers[index] + replacedStr;
+//        return newStr;
+//    }
+
+    public static String modifiedReplyHedge(Random rnd){
+        ArrayList<String> hedges = new ArrayList<>();
+        hedges.add("Please tell me more");
+        hedges.add("Many of my patients tell me the same thing");
+        hedges.add("It is getting late, maybe we had better quit");
+        return hedges.get(rnd.nextInt(hedges.size()));
     }
 
-    public static String replyQualifier(String str){
-        String replacedStr = replaceWords(str);
-        String[] qualifiers = {"Why do you say that ",
-                "You seem to think that ",
-                "So, you are concerned that "};
-        int index = rnd.nextInt(qualifiers.length);
-        String newStr = qualifiers[index] + replacedStr;
-        return newStr;
+    public static String modifiedReplyQualifier(Random rnd){
+        ArrayList<String> qualifiers = new ArrayList<>();
+        qualifiers.add("Why do you say that ");
+        qualifiers.add("You seem to think that ");
+        qualifiers.add("So, you are concerned that ");
+        return qualifiers.get(rnd.nextInt(qualifiers.size()));
     }
 
     public static String replaceWords(String str){
