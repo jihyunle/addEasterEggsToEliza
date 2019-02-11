@@ -18,7 +18,7 @@ At the end of the chat, print out the chat history.*/
 
 package com.company;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
@@ -28,17 +28,17 @@ public class elizaEasterEggs {
 
     private static final String ANSI_RESET = "\u001B[0m";
     private static final String ANSI_RED = "\u001B[31m";
-//    private static Scanner input;
-    private static Scanner input = new Scanner(System.in);
-//    private static ArrayList<String> history;
-    private static ArrayList<String> history = new ArrayList<>();
-//    private static Random rnd;
-    private static Random rnd = new Random();
+    private static Scanner input;
+//    private static Scanner input = new Scanner(System.in);
+    private static ArrayList<String> history;
+    private static Random rnd;
+//    private static Random rnd = new Random();
 
     public elizaEasterEggs(){
-//        input = new Scanner(System.in);
-//        history = new ArrayList<>();
-//        rnd = new Random();
+        history = new ArrayList<>();
+        input = new Scanner(System.in);
+
+        rnd = new Random();
     }
 
     public static void main(String[]args) {
