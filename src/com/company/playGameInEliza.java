@@ -36,12 +36,12 @@ public class playGameInEliza {
 
     private Scanner keyboard;
 
-    // Constructor no-arg
+    // No-arg ctr
     public playGameInEliza(){
         cardsDrawn = new ArrayList<>();
     }
 
-    // Constructor one-arg
+    // One-arg ctr
     public playGameInEliza(Scanner input){
         cardsDrawn = new ArrayList<>();
         keyboard = input;
@@ -211,7 +211,8 @@ public class playGameInEliza {
         }else {
             return false;
         }
-//        keyboard.close();
+        // keyboard.close() can't go here
+
     }
 
     public void resetSum(){
