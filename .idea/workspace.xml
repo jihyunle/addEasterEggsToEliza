@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="976a3cc4-dd54-4382-a5b3-816dff4290ca" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/elizaEasterEggs/com/company/elizaEasterEggs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/elizaEasterEggs/com/company/elizaEasterEggs.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/elizaEasterEggs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/elizaEasterEggs.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/elizaEasterEggs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4114">
-              <caret line="260" column="50" lean-forward="true" selection-start-line="260" selection-start-column="50" selection-end-line="260" selection-end-column="50" />
+            <state relative-caret-position="-279">
+              <caret line="126" column="53" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="119">
+              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,8 +63,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -75,8 +74,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,7 +103,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../elizaFull" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunDashboard">
@@ -170,12 +169,14 @@
       <workItem from="1549292434835" duration="732000" />
       <workItem from="1549567049037" duration="926000" />
       <workItem from="1549898552560" duration="351000" />
-      <workItem from="1550094786333" duration="113000" />
+      <workItem from="1550094786333" duration="483000" />
+      <workItem from="1550099101831" duration="601000" />
+      <workItem from="1550154469334" duration="8428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79845000" />
+    <option name="totallyTimeSpent" value="89244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -187,10 +188,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23987207" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.5021882" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -198,13 +199,13 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32932165" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3445287" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.34792122" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
@@ -268,8 +269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/playGameInEliza.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="119">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -278,8 +279,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/elizaEasterEggs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4114">
-          <caret line="260" column="50" lean-forward="true" selection-start-line="260" selection-start-column="50" selection-end-line="260" selection-end-column="50" />
+        <state relative-caret-position="-279">
+          <caret line="126" column="53" selection-start-line="126" selection-start-column="44" selection-end-line="126" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

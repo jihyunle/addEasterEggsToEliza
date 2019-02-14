@@ -18,7 +18,6 @@ At the end of the chat, print out the chat history.*/
 
 package com.company;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
@@ -28,15 +27,15 @@ public class elizaEasterEggs {
 
     private static final String ANSI_RESET = "\u001B[0m";
     private static final String ANSI_RED = "\u001B[31m";
-    private static Scanner input;
-//    private static Scanner input = new Scanner(System.in);
+    private static Scanner keybd;
+//    private static Scanner keybd = new Scanner(System.in);
     private static ArrayList<String> history;
     private static Random rnd;
 //    private static Random rnd = new Random();
 
     public elizaEasterEggs(){
         history = new ArrayList<>();
-        input = new Scanner(System.in);
+        keybd = new Scanner(System.in);
 
         rnd = new Random();
     }
@@ -55,7 +54,7 @@ public class elizaEasterEggs {
         while(true) {
 
             print("Enter your response here: ");
-            userInput = input.nextLine();
+            userInput = keybd.nextLine();
             addHistory(userInput);
 
             // If user types in "pig"
@@ -108,7 +107,7 @@ public class elizaEasterEggs {
                     String intro = "Loading game...";
                     print(intro);
                     System.out.println();
-                    playGameInEliza pg = new playGameInEliza(input);
+                    playGameInEliza pg = new playGameInEliza(keybd);
                     pg.playGame();
                     print("Finished playing a game");
                     continue;
@@ -121,7 +120,7 @@ public class elizaEasterEggs {
             }
             // Otherwise
             else {
-                elizaSays = getElizaSays(userInput);
+                elizaSays = getReply(userInput);
 
                 // If isPig is true
                 if (isPig){
@@ -148,7 +147,7 @@ public class elizaEasterEggs {
 
         String outro = ">>> END";
         print(outro);
-        input.close();
+        keybd.close();
 
         // At the end, print chat history
         showHistory();
@@ -230,9 +229,9 @@ public class elizaEasterEggs {
         return newStr;
     }
 
-    public static String getElizaSays(String str){
+    public static String getReply(String str){
         String newStr = "";
-        // After user input is read, generate a random number between 0 and 1
+        // After user keybd is read, generate a random number between 0 and 1
         int num = rnd.nextInt(2);
         switch (num){
             case 0:
@@ -292,7 +291,7 @@ public class elizaEasterEggs {
         addHistory(str);
     }
 
-    // Add to history each time user types input and each time eliza returns a statement
+    // Add to history each time user types keybd and each time eliza returns a statement
     public static void addHistory(String str){
         history.add(str);
     }
